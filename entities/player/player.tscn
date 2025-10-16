@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn5d7kltsjm1c"]
+
+[ext_resource type="Script" uid="uid://b4k8w04b7dpjv" path="res://entities/player/player.gd" id="1_symyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_symyc"]
+size = Vector2(32, 32)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_symyc")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(16, -16, 16, 16, -16, 16, -16, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_symyc")
